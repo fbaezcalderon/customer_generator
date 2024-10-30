@@ -52,7 +52,7 @@ if __name__ =='__main__':
                 e_mail = name+'.'+last_name+'@'+domain
                 code = area_code_df.loc[random.randrange(0,len(area_code_df.index)),['code']].values[0]
                 phone = '('+str(code)+')'+str(random.randrange(970,980))+'-'+str(random.randrange(4387,7893))
-                params={'name':name,
+                params={'name':name+' '+last_name,
                         'email':e_mail if random.random()>0.36 else '',
                         'phone': phone if random.random() > 0.26 else '',
                         'is_company':False,
